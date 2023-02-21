@@ -1,0 +1,78 @@
+1. Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very attractive for Rapid Application Development, as well as for use as a scripting or glue language to connect existing components together.
+2. a container for storing data
+3.Namespace is a way to implement scope. In Python, each package, module, class, function and method function owns a "namespace" in which variable names are resolved.
+4. The main difference between lists and tuples is the fact that lists are mutable whereas tuples are immutable.
+5. By type casting str()
+6. variables only exist in the scope they are created in there for if a variable is created outside of any scope its conceded global
+7. start with importing the random library then call the function random.randrange(min,max)
+8. A dictionary is a collection which is unordered, changeable and indexed. In Python dictionaries are written with curly brackets, and they have keys and values
+9. in a class self refers to the the instance of the class itself
+10. The Python break statement immediately terminates a loop entirely. Program execution proceeds to the first statement following the loop body.The Python continue statement immediately terminates the current loop iteration
+11. lists: a collection of variables or any type of object they are mutable, list of items numbers or count to items
+    tuples: a collection of variables that are immutable, grouping items with a def or a relation (apple,fruit)
+    sets: lists but unique elements. list of items that are unique
+    dictionaries: sets of key value pairs. parsing, matching 
+12. exception handling is done through the try and exception key words 
+13. comment
+14. dictionary.keys()
+15. The range() function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and stops before a specified number. for i in range(len(string)) i will iterate by 1 through the length of string
+16.Floor Division - The division of operands where the result is the quotient in which the digits after the decimal point are removed. But if one of the operands is negative, the result is floored, i.e., rounded away from zero
+17. Data types are the classification or categorization of data items. Data types represent a kind of value which determines what operations can be performed on that data. Numeric, non-numeric and Boolean (true/false) data are the most used data types.
+18. integer, float, complex number, boolean,string,list,tuples,dictionaries. strings, dictionaries, lists could be argued to not be a datatype due to having functions associated with them.
+19. compare the address of the pointers if they match the point to the same object
+20. if the loop dose not encounter a brake statement then the else clause will execute.
+21. immutable means none changing. an operation can not be preformed on an immutable datatype change it without over writing it.
+22. a collection of datatype and/or objects. functions can manipulate it.
+23. a collection of datatype. needs to be over written to bbe changed.
+24. when you want to manipulate the data or preform operation on the data
+25. list[-1]. call the -1 index
+26. when you over step the size of the list.
+27. Why should a program close a file when it's finished using it? Closing a file disconnects the program from the file. In some systems, failure to close an output file can cause a loss of data. ... It will not be erased and new data will be written at the end of the file's current content.
+28. d = False
+    for name in names:
+        if (name == 'Dale'):
+            d = True
+    if (d == True):
+        print ("Hello Dale")
+    else:
+        print ("No Dale")
+29.f = open("file.txt", "r")
+string = f.read()
+string = string.split()
+set = {}
+for s in string:
+    set.add(s)
+set.remove("\n")
+
+30.rule 1 of programing reuse code if it exists you don't need to come up with it. code form https://www.geeksforgeeks.org/python-count-occurrences-of-each-word-in-given-text-file-using-dictionary/
+# Open the file in read mode 
+text = open("sample.txt", "r") 
+
+# Create an empty dictionary 
+d = dict() 
+
+# Loop through each line of the file 
+for line in text: 
+	# Remove the leading spaces and newline character 
+	line = line.strip() 
+
+	# Convert the characters in line to 
+	# lowercase to avoid case mismatch 
+	line = line.lower() 
+
+	# Split the line into words 
+	words = line.split(" ") 
+
+	# Iterate over each word in line 
+	for word in words: 
+		# Check if the word is already in dictionary 
+		if word in d: 
+			# Increment count of word by 1 
+			d[word] = d[word] + 1
+		else: 
+			# Add the word to dictionary with count 1 
+			d[word] = 1
+
+# Print the contents of dictionary 
+for key in list(d.keys()): 
+	print(key, ":", d[key]) 
